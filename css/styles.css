@@ -1,0 +1,363 @@
+/* Application de la couleur bleue et des polices */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+}
+
+h1, h3 {
+  color: #4890DF;
+}
+
+/* Frame Above the App */
+.frame {
+  background-color: #4890DF; /* Blue color */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+/* Page d'intro avec fond animé */
+/* App Title on the Intro Page */
+
+.intro-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #4890DF, #3178b5, #1e65a8);
+  background-size: 300% 300%;
+  animation: gradientBackground 6s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animation du fond */
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Logo animé - réduit et mieux centré */
+.logo {
+  width: 120px;  /* Réduction de la taille du logo */
+  animation: moveLogo 4s ease-in-out infinite;
+  position: absolute;
+  top: 15%; /* Positionner le logo vers le haut */
+  opacity: 0.9;
+}
+
+/* Animation du logo (mouvement) */
+@keyframes moveLogo {
+  0% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Texte d'intro */
+.intro-text0 {
+  position: absolute;
+  bottom: 30%; /* Placer le texte plus bas */
+  font-size: 1.2em;
+  color: white;
+  font-weight: 100;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInText 2s ease-out 1s forwards;
+  padding: 0 20px;
+}
+.intro-text {
+  position: absolute;
+  bottom: 55%; /* Placer le texte plus bas */
+  font-size: 2.3em;
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInText 2s ease-out 1s forwards;
+  padding: 0 20px;
+}
+.intro-text2 {
+  position: absolute;
+  bottom: 50%; /* Placer le texte plus bas */
+  font-size: 2.0em;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInText 2s ease-out 1s forwards;
+  padding: 0 20px;
+}
+
+/* Animation du texte */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.intro-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Bouton "Start" placé ergonomiquement et bien visible */
+.intro-button {
+  position: absolute;
+  bottom: 20px;  /* Placer le bouton plus bas mais visible */
+  left: 775px;
+  background-color: #4890DF;
+  color: white;
+  font-size: 1.8em;
+  padding: 18px 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  border: none;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);  /* Ombre pour un effet de profondeur */
+}
+
+.contact-button {
+  position: absolute;
+  bottom: 20px;  /* Placer le bouton plus bas mais visible */
+  left: 525px;
+  background-color: #4890DF;
+  color: white;
+  font-size: 1.8em;
+  padding: 18px 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  border: none;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);  /* Ombre pour un effet de profondeur */
+}
+
+.intro-button:hover, .contact-button:hover {
+  background-color: #3178b5;
+  transform: scale(1.1);
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Animation du bouton */
+@keyframes fadeInButton {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.intro-button, .contact-button {
+  animation: fadeInButton 3s ease-out 2s forwards; /* Apparition après 2 secondes */
+}
+
+
+/* Style pour la page des situations */
+.situations-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.situations-page h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Liste des situations avec grille */
+.situations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 80%;
+  margin-top: 20px;
+}
+
+/* Carte de situation */
+.situation-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.situation-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.situation-card img {
+    width: 100%; /* Make the image take the full width of the card */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 15px; /* Add rounded corners with 15px radius */
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.situation-card:hover img {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.situation-card h3 {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Style des sous-situations */
+.subsituations-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.subsituations-page h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Carte de sous-situation (identique à la situation) */
+.subsituations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.subsituation-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.subsituation-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.subsituation-card img {
+   width: 100%; /* Make the image take the full width of the card */
+   height: auto; /* Maintain the aspect ratio */
+   border-radius: 15px; /* Add rounded corners with 15px radius */
+   transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+.subsituation-card:hover img {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.subsituation-card h3 {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Style des phrases */
+/* Style des phrases */
+.phrases-page {
+  padding: 20px;
+}
+
+.phrase {
+  display: flex;
+  flex-direction: column; /* Stack English and French vertically */
+  margin-bottom: 30px; /* Space between each phrase */
+}
+
+.english {
+  margin-bottom: 10px; /* Space between English and French */
+  font-size: 1.2em; /* Optional: make the English text a bit larger */
+  color: #777;
+}
+
+.french {
+  font-size: 1.3em; /* Slightly larger for French */
+  font-weight: bold;
+  margin-bottom: 20px; /* Space between French and play button */
+  color: #333;
+}
+
+.play-button {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: auto; /* Align play button to the right */
+}
+
+.phrase-number {
+  font-size: 1.1em;
+  color: #4890DF;
+  margin-right: 10px;
+}
+
+/* Extra space for questions */
+.phrase .english {
+  margin-bottom: 10px; /* Space between English and French */
+}
+
+.phrase .english.question {
+  margin-bottom: 30px; /* More space for questions */
+}
+
+/* If the phrase contains a question mark, apply the 'question' class using JavaScript */
+
+/* Améliorations générales */
+button {
+  background-color: #4890DF;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #3178b5;
+}
+

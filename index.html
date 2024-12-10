@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickLang Lite</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Page d'Intro -->
+  <div class="intro-page">
+    <img src="assets/logo.png" alt="Logo" class="logo">
+    <div class="intro-text">QuickLang Lite</div>
+    <div class="intro-text2">Master daily conversations, one phrase at a time!</div>
+    <div class="intro-text0">QuickLang Lite is an interactive language guiding app designed for non-French-speaking students in France. It offers a variety of situations and phrases to help you communicate with ease and confidence!</div>	
+    <button class="intro-button" onclick="startApp()">Start</button>
+    <button class="contact-button" onclick="sendEmail()">Contact Us</button>
+  </div>
+
+
+
+  <script>
+    // Fonction pour rediriger vers la page principale après l'animation de l'intro
+    function startApp() {
+      window.location.href = 'situations.html'; // Redirection vers la page des situations
+    }
+  </script>
+
+<script>
+  // Fonction pour envoyer un email via le client de messagerie de l'utilisateur
+  function sendEmail() {
+    var email = "yanistt.touati@gmail.com"; // Remplacez par votre adresse e-mail
+    var subject = "Contact Us - QuickLang Lite"; // Sujet de l'email
+    var body = "Please write your message here..."; // Corps de l'email (peut être vide ou personnalisé)
+    
+    var mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    
+    window.location.href = mailtoLink; // Ouvre le client de messagerie avec le lien mailto
+  }
+</script>
+
+
+</body>
+</html>
+
+
